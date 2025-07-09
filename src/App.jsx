@@ -8,6 +8,7 @@ import {
   useMap,
 } from "react-leaflet";
 import L from "leaflet";
+import "./App.css";
 import "leaflet/dist/leaflet.css";
 import SearchBar from "./components/SearchBar";
 // Modern blue Google Maps-style SVG pin
@@ -57,7 +58,7 @@ const App = () => {
   const [searchedLocation, setSearchedLocation] = useState(null);
 
   return (
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div style={{ height: "100vh", width: "100%" }} className="relative">
       <SearchBar setMapCenter={setMapCenter} setSearchedLocation={setSearchedLocation} locations={locations} />
       <MapContainer
         center={mapCenter}
